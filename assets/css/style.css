@@ -80,7 +80,9 @@
   --btn-primary-text: #ffffff;
 }
 
-[data-theme="dark"] img[src*="github.png"] {
+[data-theme="dark"] img[src*="github.png"],
+[data-theme="dark"] img[src*="cmd.png"],
+[data-theme="dark"] img[src*="os-mac.png"] {
   filter: invert(1) brightness(2);
 }
 
@@ -1405,3 +1407,20 @@ body {
 .footer-links.footer-links-right {
   justify-content: flex-end;
 }
+
+/* Extracted Inline Styles from HTML */
+.header-actions-wrap { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
+.section-header-wrap { margin-bottom: 24px; }
+.grid-wrapper { margin-bottom: 48px; }
+.divider-subtle { border: 0; border-top: 1px solid var(--border-color); opacity: 0.6; margin: 0; }
+.flagship-section { background-color: var(--bg-secondary); border-radius: var(--radius-xl); padding: 32px; margin-bottom: 60px; }
+.flagship-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.flagship-item-title { font-size: 1.15rem; font-weight: 800; color: var(--text-primary); }
+.flagship-item-badge { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); }
+.section-title-large { font-size: 1.6rem; }
+.intro-text-block { margin-bottom: 40px; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; }
+.intro-text-p { margin-bottom: 16px; }
+.section-subtitle { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); }
+.section-subtitle-desc { font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px; }
+.bootcamp-target { margin-top: 14px; font-size: 0.82rem; font-family: var(--font-mono); color: var(--accent-gold); font-weight: 600; }
+.link-inherit { text-decoration: none; color: inherit; }
