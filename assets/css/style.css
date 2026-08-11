@@ -305,11 +305,6 @@ body {
   background: var(--accent-gold-glow);
 }
 
-.btn-sm {
-  padding: 5px 12px;
-  font-size: 0.78rem;
-}
-
 /* Header Tier 2: Primary Navigation Bar */
 .header-bottom-tier {
   max-width: 1280px;
@@ -567,6 +562,13 @@ body {
   border-radius: var(--radius-xl);
   padding: 36px;
   box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.spajs-box:hover {
+  border-color: var(--accent-gold);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
 }
 
 .spajs-header-group {
@@ -810,6 +812,14 @@ body {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 24px;
+  transition: all var(--transition-normal);
+}
+
+.timeline-card:hover {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .timeline-role-row {
@@ -907,6 +917,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .quote-text {
@@ -1202,8 +1220,11 @@ body {
 }
 
 /* External Link Utility */
-.ext-link {
+.text-accent-cyan {
   color: var(--accent-cyan);
+}
+
+.ext-link {
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -1216,6 +1237,7 @@ body {
   color: var(--text-primary);
 }
 
+.new-tab::after,
 .ext-link::after {
   content: "";
   display: inline-block;
@@ -1226,6 +1248,10 @@ body {
   mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
+}
+
+.x-ml-6::after {
+  margin-left: 6px;
 }
 
 /* Pill List Utility */
@@ -1352,8 +1378,13 @@ body {
 }
 
 .expertise-desc.article-desc {
-  flex-grow: 1;
   font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.article-content .category-pill {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 /* Footer Section Extracted Styles */
