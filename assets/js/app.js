@@ -83,14 +83,13 @@
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link-item a');
 
-    window.addEventListener('scroll', () => {
+    const updateNavHighlight = () => {
       let currentSectionId = '';
       const scrollPos = window.scrollY + 180;
 
       sections.forEach(sec => {
         const top = sec.offsetTop;
-        const height = sec.offsetHeight;
-        if (scrollPos >= top && scrollPos < top + height) {
+        if (scrollPos >= top) {
           currentSectionId = sec.getAttribute('id');
         }
       });
@@ -101,7 +100,12 @@
           link.classList.add('active');
         }
       });
-    });
+    };
+
+    window.addEventListener('scroll', updateNavHighlight);
+    window.addEventListener('load', updateNavHighlight);
+    window.addEventListener('hashchange', updateNavHighlight);
+    updateNavHighlight();
   }
 
   /* ----------------------------------------------------
