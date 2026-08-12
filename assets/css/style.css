@@ -1420,7 +1420,7 @@ body {
 .section-title-large { font-size: 1.6rem; }
 .intro-text-block { margin-bottom: 40px; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; }
 .intro-text-p { margin-bottom: 16px; }
-.section-subtitle { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); }
+.section-subtitle { font-size: 1.1rem; font-weight: 800; color: var(--text-primary); }
 .section-subtitle-desc { font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px; }
 .bootcamp-target { margin-top: 14px; font-size: 0.82rem; font-family: var(--font-mono); color: var(--accent-gold); font-weight: 600; }
 .link-inherit { text-decoration: none; color: inherit; }
