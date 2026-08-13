@@ -1605,7 +1605,7 @@
             <h3 class="expertise-title">🎓 Master of Computer Applications (MCA)</h3>
             <p class="expertise-desc">St. Joseph's College, Trichy, Bharathidasan University (1996)</p>
           </div>
-          <div class="award-thumbnail-container">
+          <div class="award-thumbnail-container d-none">
             <img src="assets/media/images/edu-pg.png" alt="MCA Certificate" class="award-thumbnail" />
           </div>
         </div>
@@ -1615,7 +1615,7 @@
             <h3 class="expertise-title">🎓 Bachelor of Science in Physics (B.Sc)</h3>
             <p class="expertise-desc">St. Joseph's College, Trichy, Bharathidasan University (1993)</p>
           </div>
-          <div class="award-thumbnail-container">
+          <div class="award-thumbnail-container d-none">
             <img src="assets/media/images/edu-ug.png" alt="B.Sc Certificate" class="award-thumbnail" />
           </div>
         </div>
@@ -1786,7 +1786,7 @@
       </div>
       <div class="footer-right">
         <div class="footer-text footer-text-spaced">
-          © 1996 - Present • Kumar P<br />
+          &copy; 1996 - Present • Kumar P<br />
           All rights reserved.
         </div>
         <div class="footer-links footer-links-right">
@@ -1810,11 +1810,12 @@
   <!-- IMAGE VIEWER MODAL -->
   <div aria-modal="true" class="modal-backdrop" id="image-viewer-modal" role="dialog">
     <div class="modal-container" style="max-width: 96vw; padding: 16px;">
-      <div class="modal-header" style="padding: 0 0 12px 0; border: none; justify-content: flex-end;">
+      <div class="modal-header" style="padding: 0 0 12px 0; border: none; justify-content: flex-end; align-items: center; gap: 16px;">
+        <button aria-label="Toggle Image Size" class="category-pill" id="toggle-image-size" style="cursor: pointer; background: transparent; border: 1px solid var(--border-color); color: var(--text-primary); margin: 0;">View Full Size</button>
         <button aria-label="Close Modal" class="modal-close-btn" id="close-image-modal">×</button>
       </div>
       <div class="modal-body" style="padding: 0; overflow: auto; max-height: 80vh; max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
-        <img id="full-size-image" src="" alt="Full Size" style="display: block; margin: 0 auto; max-width: none; max-height: none;" />
+        <img id="full-size-image" src="" alt="Full Size" style="display: block; margin: 0 auto; max-width: 100%; max-height: 80vh; object-fit: contain;" />
       </div>
     </div>
   </div>

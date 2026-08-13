@@ -216,13 +216,36 @@
     const imageModal = document.getElementById('image-viewer-modal');
     const fullSizeImage = document.getElementById('full-size-image');
     const closeImageModal = document.getElementById('close-image-modal');
+    const toggleSizeBtn = document.getElementById('toggle-image-size');
 
     if (!imageModal || !fullSizeImage) return;
+
+    let isFitToScreen = true;
+
+    function setFitToScreen(fit) {
+      isFitToScreen = fit;
+      if (isFitToScreen) {
+        fullSizeImage.style.maxWidth = '100%';
+        fullSizeImage.style.maxHeight = '80vh';
+        if (toggleSizeBtn) toggleSizeBtn.textContent = 'View Full Size';
+      } else {
+        fullSizeImage.style.maxWidth = 'none';
+        fullSizeImage.style.maxHeight = 'none';
+        if (toggleSizeBtn) toggleSizeBtn.textContent = 'Fit to Screen';
+      }
+    }
+
+    if (toggleSizeBtn) {
+      toggleSizeBtn.addEventListener('click', () => {
+        setFitToScreen(!isFitToScreen);
+      });
+    }
 
     document.querySelectorAll('.award-thumbnail, .feedback-thumbnail').forEach(img => {
       img.style.cursor = 'pointer';
       img.addEventListener('click', () => {
         fullSizeImage.src = img.src;
+        setFitToScreen(true); // Default to fit screen when opened
         imageModal.classList.add('active');
       });
     });

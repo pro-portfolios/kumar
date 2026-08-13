@@ -49,6 +49,10 @@
   --btn-primary-text: #000000;
 }
 
+.d-none {
+  display: none !important;
+}
+
 [data-theme="light"] {
   --bg-primary: #f8fafc;
   --bg-secondary: #f1f5f9;
