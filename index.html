@@ -1280,6 +1280,10 @@
               </a>
             </li>
           </ul>
+          <div class="feedback-gallery">
+            <img src="assets/media/images/bootcamp-02.png" alt="Feedback Thumbnail" class="feedback-thumbnail" />
+            <img src="assets/media/images/bootcamp-01.png" alt="Feedback Thumbnail" class="feedback-thumbnail" />
+          </div>
         </div>
       </div>
     </section>
@@ -1296,24 +1300,86 @@
         <h3 class="section-subtitle">Leadership Awards</h3>
       </div>
       <div class="expertise-grid grid-wrapper">
+
         <div class="expertise-card">
           <div>
             <span class="category-pill">Pinnacle Award - Unisys 2017</span>
-            <h3 class="expertise-title">"Master of Influence"</h3>
+            <h3 class="award-title">"Master of Influence"</h3>
             <p class="expertise-desc">
               Highest corporate recognition at Unisys awarded for exceptional technical leadership, cross-functional
               mentorship, and establishing the global Frontend Design System.
             </p>
           </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/unisys-award-A01.png" alt="Award Thumbnail" class="award-thumbnail" />
+          </div>
         </div>
+
         <div class="expertise-card">
           <div>
-            <span class="category-pill">Exceptional Award | Client-Centricity - Unisys 2020</span>
-            <h3 class="expertise-title">"Save The Day" Technical Leadership Award</h3>
+            <span class="category-pill">Exceptional Award - Unisys 2020</span>
+            <h3 class="award-title">"Save The Day" Technical Leadership</h3>
             <p class="expertise-desc">
               Recognized for rapidly resolving critical client-side performance bottlenecks and architecture
               roadblocks on high-stakes enterprise deployments.
             </p>
+          </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/unisys-award-A02.png" alt="Award Thumbnail" class="award-thumbnail" />
+          </div>
+        </div>
+
+        <div class="expertise-card">
+          <div>
+            <span class="category-pill">Creativity Award - Unisys 2019</span>
+            <h3 class="award-title">Design System</h3>
+            <p class="expertise-desc">
+              Recognized for Architecting Enterprise Design System from the ground up.
+            </p>
+          </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/unisys-award-S01.png" alt="Award Thumbnail" class="award-thumbnail" />
+            <img src="assets/media/images/unisys-design-system.png" alt="Award Thumbnail" class="award-thumbnail" />
+          </div>
+        </div>
+
+        <div class="expertise-card">
+          <div>
+            <span class="category-pill">Creativity Award - Unisys 2019, 2020</span>
+            <h3 class="award-title">Campus Connect</h3>
+            <p class="expertise-desc">
+              In recognition for contributions to Campus Connect activities.
+            </p>
+          </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/unisys-award-S02.png" alt="Award Thumbnail" class="award-thumbnail" />
+            <img src="assets/media/images/unisys-award-S03.png" alt="Award Thumbnail" class="award-thumbnail" />
+          </div>
+        </div>
+
+        <div class="expertise-card">
+          <div>
+            <span class="category-pill">Inspire Award - Unisys 2020</span>
+            <h3 class="award-title">Software Craftsmanship</h3>
+            <p class="expertise-desc">
+              In recognition for conducting inspirational talk on Software Craftsmanship.
+            </p>
+          </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/unisys-award-S04.png" alt="Award Thumbnail" class="award-thumbnail" />
+          </div>
+        </div>
+
+        <div class="expertise-card">
+          <div>
+            <span class="category-pill">Team Recognition - Unisys 2021</span>
+            <h3 class="award-title">Mentorship</h3>
+            <p class="expertise-desc">
+              In recognition for the mentorship to team members for their professional/personal development.
+            </p>
+          </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/unisys-award-S05.png" alt="Award Thumbnail" class="award-thumbnail" />
           </div>
         </div>
       </div>
@@ -1539,12 +1605,18 @@
             <h3 class="expertise-title">🎓 Master of Computer Applications (MCA)</h3>
             <p class="expertise-desc">St. Joseph's College, Trichy, Bharathidasan University (1996)</p>
           </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/edu-pg.png" alt="MCA Certificate" class="award-thumbnail" />
+          </div>
         </div>
         <div class="expertise-card">
           <div>
             <span class="category-pill">Undergraduate Degree</span>
             <h3 class="expertise-title">🎓 Bachelor of Science in Physics (B.Sc)</h3>
             <p class="expertise-desc">St. Joseph's College, Trichy, Bharathidasan University (1993)</p>
+          </div>
+          <div class="award-thumbnail-container">
+            <img src="assets/media/images/edu-ug.png" alt="B.Sc Certificate" class="award-thumbnail" />
           </div>
         </div>
       </div>
@@ -1735,6 +1807,20 @@
       </div>
     </div>
   </div>
+  <!-- IMAGE VIEWER MODAL -->
+  <div aria-modal="true" class="modal-backdrop" id="image-viewer-modal" role="dialog">
+    <div class="modal-container" style="max-width: 96vw; padding: 16px;">
+      <div class="modal-header" style="padding: 0 0 12px 0; border: none; justify-content: flex-end;">
+        <button aria-label="Close Modal" class="modal-close-btn" id="close-image-modal">×</button>
+      </div>
+      <div class="modal-body" style="padding: 0; overflow: auto; max-height: 80vh; max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        <img id="full-size-image" src="" alt="Full Size" style="display: block; margin: 0 auto; max-width: none; max-height: none;" />
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- APPLICATION SCRIPTS -->
   <script src="assets/js/app.js"></script>
 </body>

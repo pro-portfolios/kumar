@@ -16,6 +16,7 @@
     initMobileNav();
     initTestimonialFilters();
     initExtensionModal();
+    initImageViewerModal();
   });
 
   /* ----------------------------------------------------
@@ -207,6 +208,47 @@
       if (e.target === modal) modal.classList.remove('active');
     });
   }
+
+  /* ----------------------------------------------------
+     10. IMAGE VIEWER MODAL
+  ---------------------------------------------------- */
+  function initImageViewerModal() {
+    const imageModal = document.getElementById('image-viewer-modal');
+    const fullSizeImage = document.getElementById('full-size-image');
+    const closeImageModal = document.getElementById('close-image-modal');
+
+    if (!imageModal || !fullSizeImage) return;
+
+    document.querySelectorAll('.award-thumbnail, .feedback-thumbnail').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        fullSizeImage.src = img.src;
+        imageModal.classList.add('active');
+      });
+    });
+
+    if (closeImageModal) {
+      closeImageModal.addEventListener('click', () => {
+        imageModal.classList.remove('active');
+      });
+    }
+
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal) {
+        imageModal.classList.remove('active');
+      }
+    });
+  }
+
+  /* ----------------------------------------------------
+     11. GLOBAL ESC KEY TO CLOSE MODALS
+  ---------------------------------------------------- */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const activeModals = document.querySelectorAll('.modal-backdrop.active');
+      activeModals.forEach(modal => modal.classList.remove('active'));
+    }
+  });
 
   /* Helper to escape HTML */
   function escapeHtml(str) {
