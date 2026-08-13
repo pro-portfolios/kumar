@@ -17,6 +17,7 @@
     initTestimonialFilters();
     initExtensionModal();
     initImageViewerModal();
+    initEduCertViewToggle();
   });
 
   /* ----------------------------------------------------
@@ -129,8 +130,6 @@
       });
     });
   }
-
-
 
   /* ----------------------------------------------------
      8. TESTIMONIAL MATRIX & FILTERS
@@ -272,6 +271,20 @@
       activeModals.forEach(modal => modal.classList.remove('active'));
     }
   });
+
+
+  /* ----------------------------------------------------
+     12. TOGGLE EDU CERTIFICATE VISIBILITY
+  ---------------------------------------------------- */
+  function initEduCertViewToggle() {
+    document.addEventListener('dblclick', e => {
+      if (e.target.matches('#education .edu-ctrl')) {
+        document
+          .querySelectorAll('#education .award-thumbnail-container')
+          .forEach(el => el.classList.toggle('d-none'));
+      }
+    });
+  }
 
   /* Helper to escape HTML */
   function escapeHtml(str) {

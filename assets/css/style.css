@@ -53,6 +53,10 @@
   display: none !important;
 }
 
+.edu-ctrl:hover {
+  cursor: pointer;
+}
+
 [data-theme="light"] {
   --bg-primary: #f8fafc;
   --bg-secondary: #f1f5f9;
